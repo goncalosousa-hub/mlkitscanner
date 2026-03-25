@@ -59,7 +59,8 @@ public class MLKitScannerPlugin extends CordovaPlugin {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == START_DOCUMENT_SCAN_REQUEST_CODE) {
-            GmsDocumentScanningResult result = GmsDocumentScanningResult.getFromActivityResult(data);
+            // CORREÇÃO AQUI: fromActivityResultIntent em vez de getFromActivityResult
+            GmsDocumentScanningResult result = GmsDocumentScanningResult.fromActivityResultIntent(data);
             
             if (resultCode == Activity.RESULT_OK && result != null) {
                 // Sucesso! O Scanner devolveu a imagem cortada
@@ -77,4 +78,3 @@ public class MLKitScannerPlugin extends CordovaPlugin {
             }
         }
     }
-}
