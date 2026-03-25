@@ -9,16 +9,19 @@
         <clobbers target="MLKitScanner" />
     </js-module>
 
-    <platform name="android">
-        <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="MLKitScanner">
-                <param name="android-package" value="com.outsystems.mlkitscanner.MLKitScannerPlugin" />
-            </feature>
-        </config-file>
-
-        <framework src="com.google.android.gms:play-services-mlkit-document-scanner:16.0.0-beta1" />
-
-        <source-file src="src/android/MLKitScannerPlugin.java" 
-                     target-dir="src/com/outsystems/mlkitscanner" />
-    </platform>
+        <platform name="android">
+            <config-file target="res/xml/config.xml" parent="/*">
+                <feature name="MLKitScanner">
+                    <param name="android-package" value="com.outsystems.mlkitscanner.MLKitScannerPlugin" />
+                </feature>
+            </config-file>
+        
+            <framework src="com.google.android.gms:play-services-mlkit-document-scanner:16.0.0" />
+            
+            <source-file src="src/android/MLKitScannerPlugin.java" target-dir="src/com/outsystems/mlkitscanner" />
+            
+            <config-file target="AndroidManifest.xml" parent="/manifest/application">
+                <meta-data android:name="com.google.mlkit.vision.DEPENDENCIES" android:value="barcode_ui"/>
+            </config-file>
+        </platform>
 </plugin>
