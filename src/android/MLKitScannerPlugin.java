@@ -78,3 +78,4 @@ public class MLKitScannerPlugin extends CordovaPlugin {
             }
         }
     }
+}
