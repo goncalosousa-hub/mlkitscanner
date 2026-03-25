@@ -1,0 +1,11 @@
+{
+  "name": "com.outsystems.mlkitscanner",
+  "version": "1.0.0",
+  "description": "ML Kit Document Scanner Plugin",
+  "cordova": {
+    "id": "com.outsystems.mlkitscanner",
+    "platforms": [
+      "android"
+    ]
+  }
+}
