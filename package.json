@@ -2,10 +2,9 @@
   "name": "com.outsystems.mlkitscanner",
   "version": "1.0.0",
   "description": "ML Kit Document Scanner Plugin",
+  "author": "Goncalo Sousa",
   "cordova": {
     "id": "com.outsystems.mlkitscanner",
-    "platforms": [
-      "android"
-    ]
+    "platforms": ["android"]
   }
 }
